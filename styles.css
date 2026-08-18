@@ -55,7 +55,7 @@ img {
 .brand,
 .site-header nav a,
 .language-switch a,
-.print-button {
+.pdf-button {
   display: flex;
   align-items: center;
   border-right: 1px solid var(--line);
@@ -66,7 +66,7 @@ img {
   text-transform: uppercase;
 }
 
-.print-button {
+.pdf-button {
   border-top: 0;
   border-bottom: 0;
   border-left: 0;
@@ -91,7 +91,7 @@ img {
 
 .site-header nav a:hover,
 .language-switch a:hover,
-.print-button:hover,
+.pdf-button:hover,
 .link-row a:hover,
 .contact a:hover {
   color: var(--accent);
@@ -567,7 +567,7 @@ h1 span,
     justify-content: center;
   }
 
-  .print-button {
+  .pdf-button {
     min-height: 48px;
     justify-content: center;
   }
@@ -624,7 +624,7 @@ h1 span,
   .brand,
   .site-header nav a,
   .language-switch a,
-  .print-button {
+  .pdf-button {
     padding: 0 16px;
   }
 
@@ -657,80 +657,5 @@ h1 span,
 
   .site-footer {
     flex-direction: column;
-  }
-}
-
-@media print {
-  @page {
-    margin: 12mm;
-  }
-
-  html {
-    scroll-behavior: auto;
-  }
-
-  body {
-    background: white;
-    color: black;
-  }
-
-  .site-header,
-  .hero-actions,
-  .tab-list,
-  .project-tabs > input {
-    display: none !important;
-  }
-
-  .hero,
-  .metrics,
-  .section-head,
-  .tab-panel,
-  .skills-grid,
-  .certificate-grid,
-  .split,
-  .contact {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-  }
-
-  .hero,
-  .section,
-  .contact {
-    padding: 18px 0;
-  }
-
-  .hero-photo {
-    min-height: auto;
-  }
-
-  .hero-photo img {
-    max-height: 220px;
-    object-fit: contain;
-  }
-
-  .project-tabs {
-    overflow: visible;
-    border: 0;
-  }
-
-  .tab-panel {
-    page-break-inside: avoid;
-    break-inside: avoid;
-    margin-bottom: 16px;
-    padding: 0;
-  }
-
-  .project-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .project-gallery img,
-  .certificate-grid img {
-    max-height: 180px;
-    object-fit: contain;
-  }
-
-  a {
-    color: black;
   }
 }
